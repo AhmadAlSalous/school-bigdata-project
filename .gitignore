@@ -1,0 +1,9 @@
+# Hive local metastore and logs
+hive/metastore_db/
+hive/derby.log
+
+# Hadoop / Hive temp files
+*.log
+*.lock
+*.lck
+.tmp/
