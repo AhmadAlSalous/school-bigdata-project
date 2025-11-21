@@ -75,6 +75,31 @@ The system transforms raw CSV datasets into a fully modeled **data warehouse** d
     +--------------------------------+
 
 ---
+                   +---------------------------+
+                   |       Frontend UI         |
+                   |  (React / Vue / HTML)     |
+                   +-------------+-------------+
+                                 |
+                                 |  (HTTP JSON API)
+                                 v
+                   +---------------------------+
+                   |        Backend API         |
+                   |   Flask / FastAPI (Python) |
+                   |   Runs on your machine     |
+                   +-------------+--------------+
+                                 |
+                                 | (Reads Parquet/CSV)
+                                 v
+      +----------------------------------------------------------+
+      |                     Data Warehouse (DW)                  |
+      |   HiveStar Schema   |   Clean Parquet Tables   |  CSVs   |
+      |   (fact + dims)     |   (exports for UI team)            |
+      +----------------------------------------------------------+
+                                 |
+                                 | (HDFS raw → Hive raw)
+                                 v
+                        HDFS Raw Zone (/school/raw/)
+
 
 # 📦 Datasets Used
 
