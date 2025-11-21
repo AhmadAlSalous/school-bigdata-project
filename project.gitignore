@@ -18,7 +18,12 @@ venv/
 __pycache__/
 *.pyc
 
-
+hive/metastore_db/
+hive/derby.log
+*.log
+*.lock
+*.lck
+*.tmp/
 *.zip
 *.tar.gz
 
